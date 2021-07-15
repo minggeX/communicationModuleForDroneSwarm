@@ -176,22 +176,6 @@ set_source_files_properties(${PROTO_SRCS} ${PROTO_HDRS} PROPERTIES GENERATED TRU
 #                 )
 
 
-add_executable(delay src/delay.cpp ${PROTO_SRCS} ${PROTO_HDRS})
-add_dependencies(delay ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(delay
-  ${catkin_LIBRARIES}
-  protobuf
-  zmq
-)
-
-add_executable(publish src/publish.cpp ${PROTO_SRCS} ${PROTO_HDRS})
-add_dependencies(publish ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
-target_link_libraries(publish
-  ${catkin_LIBRARIES}
-  protobuf
-  zmq
-)
-
 add_executable(subscribe src/subscribe.cpp ${PROTO_SRCS} ${PROTO_HDRS})
 add_dependencies(subscribe ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(subscribe
