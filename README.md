@@ -1,10 +1,12 @@
 # communicationModuleForDroneSwarm
 
+## briefly introduction
 This is a demo communication module for drone swarm.  
 The compile environment is *ROS*.  
 The data format of the message is **protobuf3**, and the data transformation protocol is **zeromq**.
 
 the overall structure of the communication process is:
+![](http://github.com/minggeX/communicationModuleForDroneSwarm/raw/main/overallStructure.png)
 ![](http://github.com/minggeX/communicationModuleForDroneSwarm/raw/main/structure.png)
 
 ## Usage  
@@ -25,7 +27,6 @@ And when run the code in actual environment, replace the address in connect_addr
 4.compile the project  
 
     catkin_make
-    
 
 5.run the code  
 
@@ -35,7 +36,11 @@ in uav:
     
 in server:
 
-
     roslaunch delay cloudServer.launch
     
+### Adapt
+you can adapt the code for your own project focus on the following two points:
+1. Modify the delay.proto to your own communication message content. In the demo project, the message is the uavs' position information.
+2. In the demo project, the client uav send its position information to the server when its status update, and the server publish this information as soon as it recieve the message. So you can adapt the time when the uav client send its information to server and the time when server publish the message.
+
 
