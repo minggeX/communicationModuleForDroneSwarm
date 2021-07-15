@@ -6,7 +6,7 @@ The compile environment is *ROS*.
 The data format of the message is **protobuf3**, and the data transformation protocol is **zeromq**.
 
 the overall structure of the communication process is:
-![](http://github.com/minggeX/communicationModuleForDroneSwarm/raw/main/protubuf.png)
+![](http://github.com/minggeX/communicationModuleForDroneSwarm/raw/main/protobuf.png)
 
 ![](http://github.com/minggeX/communicationModuleForDroneSwarm/raw/main/structure.png)
 
