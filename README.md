@@ -35,9 +35,17 @@ in uav:
 
     roslaunch delay client.launch 
     
+or:
+
+    roslaunch (your package name) client.launch 
+    
 in server:
 
     roslaunch delay cloudServer.launch
+    
+or:
+
+    roslaunch (your package name) cloudServer.launch
     
 #### Adapt
 you can adapt the code for your own project focus on the following two points:
