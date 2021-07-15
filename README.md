@@ -4,6 +4,8 @@ This is a demo communication module for drone swarm.
 The compile environment is *ROS*.  
 The data format of the message is **protobuf3**, and the data transformation protocol is **zeromq**.
 
+the overall structure of the communication process is:
+![](http://github.com/minggeX/communicationModuleForDroneSwarm/raw/master/structure.png)
 
 ## Usage  
 1.The directory /src contains a ros package delay. You can create a ros package with the same name "delay" and copy all the files in it to your package 
