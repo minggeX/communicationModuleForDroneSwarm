@@ -6,10 +6,11 @@ The compile environment is *ROS*.
 The data format of the message is **protobuf3**, and the data transformation protocol is **zeromq**.
 
 the overall structure of the communication process is:
-![](http://github.com/minggeX/communicationModuleForDroneSwarm/raw/main/overallStructure.png)
+![](http://github.com/minggeX/communicationModuleForDroneSwarm/raw/main/protubuf.png)
+
 ![](http://github.com/minggeX/communicationModuleForDroneSwarm/raw/main/structure.png)
 
-## Usage  
+### Usage  
 1.The directory /src contains a ros package delay. You can create a ros package with the same name "delay" and copy all the files in it to your package 
 directory. Or you can copy all the files to your own ros package. Once you do so, you are required to modify the corresponding package name in the 
 launch file.
@@ -38,7 +39,7 @@ in server:
 
     roslaunch delay cloudServer.launch
     
-### Adapt
+#### Adapt
 you can adapt the code for your own project focus on the following two points:
 1. Modify the delay.proto to your own communication message content. In the demo project, the message is the uavs' position information.
 2. In the demo project, the client uav send its position information to the server when its status update, and the server publish this information as soon as it recieve the message. So you can adapt the time when the uav client send its information to server and the time when server publish the message.
